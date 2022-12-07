@@ -1,0 +1,12 @@
+<!-- <button class="btn btn-sm btn-danger" 
+(click)="ShowSecret=!ShowSecret">Display Details
+</button> -->
+<button class="btn btn-sm btn-danger" 
+(click)="onToggleDisplay()">Display Details
+</button>
+
+<p *ngIf="ShowSecret">Secret Password=tuna</p>
+<div *ngFor="let array of logarray"
+[ngStyle]="{backgroundColor: array >= 5 ? 'blue' : 'transparent'}"
+[ngClass]="{'white': array >= 5}"
+>{{array}} </div>
